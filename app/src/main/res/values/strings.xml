@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tip Calculator_ Codelab</string>
+    <string name="hint_inputTip">Cost of Service</string>
+    <string name="how_was_the_service_TextView">How was the service?</string>
+    <string name="amazing_20_RadioButton">Amazing (20%)</string>
+    <string name="good_15_RadioButton">Good (15%)</string>
+    <string name="ok_15_RadioButton">OK (15%)</string>
+    <string name="round_up_tip_TextView">Round up tip?</string>
+    <string name="calculate_Button">Calculate</string>
+</resources>
