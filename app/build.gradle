@@ -11,6 +11,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "me.ivaangb.tipcalculator_codelab"
         minSdkVersion 22
         targetSdkVersion 30

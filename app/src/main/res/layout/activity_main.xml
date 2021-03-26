@@ -1,89 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/generalPadding">
 
-    <EditText
-        android:id="@+id/inputTip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_inputTip"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/how_was_the_service_TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputTip" />
-
-    <RadioGroup
-        android:id="@+id/tip_RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:checkedButton="@id/radioButtonAmazing"
-        app:layout_constraintTop_toBottomOf="@id/textViewQuestion">
-
-        <RadioButton
-            android:id="@+id/radioButtonAmazing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/amazing_20_RadioButton" />
-
-        <RadioButton
-            android:id="@+id/radioButtonGood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/good_15_RadioButton" />
-
-        <RadioButton
-            android:id="@+id/radioButtonOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok_15_RadioButton" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/roundUpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/round_up_tip_TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tip_RadioGroup" />
-
-    <Switch
-        android:id="@+id/roundUpSwitch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/roundUpTextView"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Button
-        android:id="@+id/calculate_Button"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/generalPadding"
-        android:text="@string/calculate_Button"
-        app:layout_constraintTop_toBottomOf="@id/roundUpTextView" />
+        android:layout_height="match_parent"
+        android:padding="@dimen/largeMargin"
+        >
 
-    <TextView
-        android:id="@+id/totalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calculate_Button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/inputTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_store"
+            android:drawablePadding="@dimen/quarter_margin"
+
+            android:hint="@string/hint_inputTip"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/halfMargin"
+            android:drawableStart="@drawable/ic_service"
+            android:drawablePadding="@dimen/quarter_margin"
+            android:text="@string/how_was_the_service_TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTip" />
+
+        <RadioGroup
+
+            android:id="@+id/tip_RadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/radioButtonAmazing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewQuestion">
+
+            <RadioButton
+                android:id="@+id/radioButtonAmazing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amazing_20_RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good_15_RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok_15_RadioButton" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/roundUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:drawableStart="@drawable/ic_round_up"
+            android:drawablePadding="@dimen/quarter_margin"
+            android:text="@string/round_up_tip_TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tip_RadioGroup" />
+
+        <Switch
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/roundUpTextView"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/calculate_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/largeMargin"
+            android:text="@string/calculate_Button"
+            app:layout_constraintTop_toBottomOf="@id/roundUpTextView" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate_Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
