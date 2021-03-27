@@ -12,5 +12,36 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/primaryDarkColor</item>
         <!-- Customize your theme here. -->
+
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="radioButtonStyle">@style/Widget.TipCalculator_Codelab.CompoundButton.RadioButton</item>
+        <item name="switchStyle">@style/Widget.TipCalculator_Codelab.CompoundButton.Switch</item>
     </style>
+
+
+    <style name="Widget.TipCalculator_Codelab.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/quarter_margin</item>
+        <item name="android:layout_marginTop">@dimen/halfMargin</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.TipCalculator_Codelab.CompoundButton.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:minHeight">48dp</item>
+        <item name="colorPrimary">@color/primaryLightColor</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.TipCalculator_Codelab.CompoundButton.RadioButton"
+        parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="colorControlActivated">@color/primaryLightColor</item>
+        <item name="android:paddingStart">@dimen/halfMargin</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+
 </resources>
